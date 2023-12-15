@@ -1,0 +1,15 @@
+---
+id: {{ cookiecutter.data_product_id }}
+name: {{ cookiecutter.data_product_name }}
+metadata:
+  - ownership: {{ cookiecutter.data_product_owner_name }}
+  - description:
+  - schema:
+description:
+input_ports:
+output_ports:
+metrics:
+  - quality:
+  - operational:
+classification: {{ cookiecutter.data_product_classification }}
+tags:

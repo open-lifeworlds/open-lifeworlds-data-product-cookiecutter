@@ -1,0 +1,20 @@
+{
+  "data_product_name": "My Data Product",
+  "data_product_id": "{{ cookiecutter.data_product_name|lower|replace(' ', '-') }}",
+  "data_product_url": "https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}",
+  "data_product_classification": [
+    "source-aligned",
+    "aggregated",
+    "consumer-aligned"
+  ],
+  "data_product_owner_name": "Open Lifeworlds",
+  "data_product_owner_email": "openlifeworlds@gmail.com",
+  "__prompts__": {
+    "data_product_name": "Enter a descriptive name for your data product",
+    "data_product_id": "Enter a unique identifier for your data product",
+    "data_product_url": "Enter the Github URL of your data product",
+    "data_product_classification": "Specify the classification of the data product",
+    "data_product_owner_name": "Enter the owner of the data product",
+    "data_product_owner_email": "Enter the e-Mail of owner of the data product"
+  }
+}

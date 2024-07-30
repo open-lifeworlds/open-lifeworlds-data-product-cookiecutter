@@ -1,11 +1,13 @@
 ---
 id: {{ cookiecutter.data_product_id }}
 metadata:
-  - name: { { cookiecutter.data_product_name } }
-  - owner: {{ cookiecutter.data_product_owner_name }}
-  - description:
-  - url:
-  - license:
+  name: { { cookiecutter.data_product_name } }
+  owner: {{ cookiecutter.data_product_owner_name }}
+  description:
+  url:
+  license:
+  updated:
+  schema:
 input_ports:
 transformation_steps:
 output_ports:
@@ -17,5 +19,5 @@ observability:
 consumers:
 use_cases:
 classification: {{ cookiecutter.data_product_classification }}
-ubiquitous_language:
+ubiquitous_language: []
 tags:

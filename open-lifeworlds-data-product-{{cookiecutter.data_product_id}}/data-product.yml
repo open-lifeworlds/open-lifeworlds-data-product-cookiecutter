@@ -1,7 +1,7 @@
 ---
 id: {{ cookiecutter.data_product_id }}
 metadata:
-  name: { { cookiecutter.data_product_name } }
+  name: {{ cookiecutter.data_product_name }}
   owner: {{ cookiecutter.data_product_owner_name }}
   description:
   url:

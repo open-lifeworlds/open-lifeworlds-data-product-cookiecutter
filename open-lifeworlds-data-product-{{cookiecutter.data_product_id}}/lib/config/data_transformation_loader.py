@@ -55,15 +55,22 @@ class Loader(yaml.SafeLoader):
 
     def construct_mapping(self, node, deep=False):
         if not isinstance(node, MappingNode):
-            raise ConstructorError(None, None,
-                                   "expected a mapping node, but found %s" % node.id,
-                                   node.start_mark)
+            raise ConstructorError(
+                None,
+                None,
+                "expected a mapping node, but found %s" % node.id,
+                node.start_mark,
+            )
         mapping = {}
         for key_node, value_node in node.value:
             key = self.construct_object(key_node, deep=deep)
             if not isinstance(key, collections.abc.Hashable):
-                raise ConstructorError("while constructing a mapping", node.start_mark,
-                                       "found unhashable key", key_node.start_mark)
+                raise ConstructorError(
+                    "while constructing a mapping",
+                    node.start_mark,
+                    "found unhashable key",
+                    key_node.start_mark,
+                )
 
             # Make sure that some fields are read in a raw format
             if key in self.raw_fields:

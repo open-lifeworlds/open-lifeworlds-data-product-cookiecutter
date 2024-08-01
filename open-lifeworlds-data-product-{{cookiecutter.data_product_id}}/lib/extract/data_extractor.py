@@ -6,21 +6,22 @@ from lib.tracking_decorator import TrackingDecorator
 
 
 @TrackingDecorator.track_time
-def extract_data(data_product_manifest: DataProductManifest, results_path, clean=False, quiet=False):
+def extract_data(
+    data_product_manifest: DataProductManifest, results_path, clean=False, quiet=False
+):
     # Make results path
     os.makedirs(os.path.join(results_path), exist_ok=True)
 
     # Iterate over input ports
     if data_product_manifest.input_ports:
         for input_port in data_product_manifest.input_ports:
-
             # Make results path
             os.makedirs(os.path.join(results_path, input_port.id), exist_ok=True)
 
             # Iterate over files
             for url in input_port.files:
                 # Determine file path
-                file_name = url.rsplit('/', 1)[-1]
+                file_name = url.rsplit("/", 1)[-1]
                 file_path = os.path.join(results_path, input_port.id, file_name)
 
                 # Download file
@@ -29,7 +30,7 @@ def extract_data(data_product_manifest: DataProductManifest, results_path, clean
                     file_name=file_name,
                     url=url,
                     clean=clean,
-                    quiet=quiet
+                    quiet=quiet,
                 )
 
 

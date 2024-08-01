@@ -6,8 +6,11 @@ from lib.tracking_decorator import TrackingDecorator
 
 
 @TrackingDecorator.track_time
-def generate_data_product_canvas(data_product_manifest: DataProductManifest, data_transformation: DataTransformation,
-                                 docs_path):
+def generate_data_product_canvas(
+    data_product_manifest: DataProductManifest,
+    data_transformation: DataTransformation,
+    docs_path,
+):
     data_product_canvas_path = os.path.join(docs_path, "data-product-canvas.md")
 
     content = f"\n# Data Product Canvas - {data_product_manifest.metadata.name}"
@@ -85,13 +88,12 @@ def generate_data_product_canvas(data_product_manifest: DataProductManifest, dat
                 content += f"\n* [{file.rsplit('/', 1)[-1]}]({file})"
             content += "\n"
 
-    if data_product_manifest.observability and \
-            (
-                    data_product_manifest.observability.quality or
-                    data_product_manifest.observability.operational or
-                    data_product_manifest.observability.slas or
-                    data_product_manifest.observability.security
-            ):
+    if data_product_manifest.observability and (
+        data_product_manifest.observability.quality
+        or data_product_manifest.observability.operational
+        or data_product_manifest.observability.slas
+        or data_product_manifest.observability.security
+    ):
         content += "\n"
         content += "\n## Observability"
         content += "\n"

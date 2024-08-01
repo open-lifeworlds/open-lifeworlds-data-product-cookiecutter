@@ -21,6 +21,7 @@ See [data product canvas](docs/data-product-canvas.md).
 
 * [Python](https://www.python.org/)
 * [uv](https://docs.astral.sh/uv/)
+* [ruff](https://docs.astral.sh/ruff/)
 
 ## Installation
 

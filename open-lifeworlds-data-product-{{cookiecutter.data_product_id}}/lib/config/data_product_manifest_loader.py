@@ -52,7 +52,9 @@ class DataProductManifest:
     id: str
     metadata: Metadata
     input_ports: Optional[List[Port]] = field(default_factory=list)
-    transformation_steps: Optional[List[TransformationStep]] = field(default_factory=list)
+    transformation_steps: Optional[List[TransformationStep]] = field(
+        default_factory=list
+    )
     output_ports: Optional[List[Port]] = field(default_factory=list)
     observability: Optional[Observability] = None
     consumers: Optional[List[str]] = field(default_factory=list)

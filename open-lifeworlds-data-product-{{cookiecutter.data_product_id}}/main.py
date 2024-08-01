@@ -30,7 +30,9 @@ def main(argv):
         if opt in ("-h", "--help"):
             print("main.py")
             print("--help                           show this help")
-            print("--clean                          clean intermediate results before start")
+            print(
+                "--clean                          clean intermediate results before start"
+            )
             print("--quiet                          do not log outputs")
             sys.exit()
         elif opt in ("-c", "--clean"):
@@ -51,7 +53,12 @@ def main(argv):
     # Extract
     #
 
-    extract_data(data_product_manifest=data_product_manifest, results_path=bronze_path, clean=clean, quiet=quiet)
+    extract_data(
+        data_product_manifest=data_product_manifest,
+        results_path=bronze_path,
+        clean=clean,
+        quiet=quiet,
+    )
 
     #
     # Transform
@@ -62,7 +69,7 @@ def main(argv):
         source_path=bronze_path,
         results_path=silver_path,
         clean=clean,
-        quiet=quiet
+        quiet=quiet,
     )
 
     #
@@ -73,13 +80,13 @@ def main(argv):
         data_product_manifest=data_product_manifest,
         config_path=script_path,
         data_paths=[silver_path, gold_path],
-        file_endings=(".csv")
+        file_endings=(".csv"),
     )
 
     generate_data_product_canvas(
         data_product_manifest=data_product_manifest,
         data_transformation=data_transformation,
-        docs_path=docs_path
+        docs_path=docs_path,
     )
 
 

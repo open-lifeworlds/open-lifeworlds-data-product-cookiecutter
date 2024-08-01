@@ -20,37 +20,43 @@ See [data product canvas](docs/data-product-canvas.md).
 ### Built With
 
 * [Python](https://www.python.org/)
+* [uv](https://docs.astral.sh/uv/)
 
 ## Installation
 
-Install the following dependencies to fulfill the requirements for this project to run.
+Install uv, see https://github.com/astral-sh/uv?tab=readme-ov-file#installation.
 
-```shell script
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+```shell
+# On macOS and Linux.
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Usage
 
-### Transformation
+Run this command to generate and activate a virtual environment.
+
+```shell
+uv venv
+```
 
 Run this command to start the main script.
 
-```shell script
-python main.py [OPTION]...
+```shell
+python3 main.py [OPTION]...
 
   -h, --help                           show this help
   -c, --clean                          clean intermediate results before start
   -q, --quiet                          do not log outputs
 
 Examples:
-  python main.py -c
+  python3 main.py -c
 ```
 
 ## Roadmap
 
-See the [open issues](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-15-minute-city/issues) for a list of proposed features (and
- known issues).
+See the [open issues](https://github.com/open-lifeworlds/{{ cookiecutter.data_product_id }}/issues) for a list of
+proposed features (and
+known issues).
 
 ## License
 

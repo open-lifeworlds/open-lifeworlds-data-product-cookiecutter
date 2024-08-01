@@ -2,7 +2,7 @@ import os
 from dataclasses import asdict
 
 import yaml
-from config.data_product_manifest_loader import DataProductManifest, Port, Metadata
+from lib.config.data_product_manifest_loader import DataProductManifest, Port, Metadata
 from lib.tracking_decorator import TrackingDecorator
 
 

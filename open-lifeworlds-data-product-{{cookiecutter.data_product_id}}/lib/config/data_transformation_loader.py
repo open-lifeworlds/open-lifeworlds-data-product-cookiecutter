@@ -5,6 +5,7 @@ from typing import List, Optional
 
 import yaml
 from dacite import from_dict
+from lib.tracking_decorator import TrackingDecorator
 from yaml import MappingNode
 from yaml.constructor import ConstructorError
 
@@ -73,6 +74,7 @@ class Loader(yaml.SafeLoader):
         return mapping
 
 
+@TrackingDecorator.track_time
 def load_data_transformation(config_path) -> DataTransformation:
     data_transformation_path = os.path.join(config_path, "data-transformation.yml")
 

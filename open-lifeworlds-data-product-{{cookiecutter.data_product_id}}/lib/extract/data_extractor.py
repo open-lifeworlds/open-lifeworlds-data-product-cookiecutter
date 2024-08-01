@@ -11,25 +11,26 @@ def extract_data(data_product_manifest: DataProductManifest, results_path, clean
     os.makedirs(os.path.join(results_path), exist_ok=True)
 
     # Iterate over input ports
-    for input_port in data_product_manifest.input_ports:
+    if data_product_manifest.input_ports:
+        for input_port in data_product_manifest.input_ports:
 
-        # Make results path
-        os.makedirs(os.path.join(results_path, input_port.id), exist_ok=True)
+            # Make results path
+            os.makedirs(os.path.join(results_path, input_port.id), exist_ok=True)
 
-        # Iterate over files
-        for url in input_port.files:
-            # Determine file path
-            file_name = url.rsplit('/', 1)[-1]
-            file_path = os.path.join(results_path, input_port.id, file_name)
+            # Iterate over files
+            for url in input_port.files:
+                # Determine file path
+                file_name = url.rsplit('/', 1)[-1]
+                file_path = os.path.join(results_path, input_port.id, file_name)
 
-            # Download file
-            download_file(
-                file_path=file_path,
-                file_name=file_name,
-                url=url,
-                clean=clean,
-                quiet=quiet
-            )
+                # Download file
+                download_file(
+                    file_path=file_path,
+                    file_name=file_name,
+                    url=url,
+                    clean=clean,
+                    quiet=quiet
+                )
 
 
 def download_file(file_path, file_name, url, clean, quiet):

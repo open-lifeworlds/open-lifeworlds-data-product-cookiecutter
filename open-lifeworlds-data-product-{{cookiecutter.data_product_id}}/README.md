@@ -1,8 +1,8 @@
-[![Issues](https://img.shields.io/github/issues/open-lifeworlds/open-lifeworlds-data-product-berlin-15-minute-city)](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-15-minute-city/issues)
+[![Issues](https://img.shields.io/github/issues/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }})](https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}/issues)
 
 <br />
 <p align="center">
-  <a href="https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-15-minute-city">
+  <a href="https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}">
     <img src="logo_with_text.png" alt="Logo" height="80">
   </a>
 

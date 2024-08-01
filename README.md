@@ -21,6 +21,8 @@
 
 ## Usage
 
+Install cookiecutter, see https://cookiecutter.readthedocs.io/en/stable/installation.html.
+
 Run this command to use the cookiecutter template
 
 ```shell

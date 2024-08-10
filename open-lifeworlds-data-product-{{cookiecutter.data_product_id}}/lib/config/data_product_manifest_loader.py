@@ -9,6 +9,12 @@ from lib.tracking_decorator import TrackingDecorator
 
 
 @dataclass
+class SchemaItem:
+    name: str
+    description: Optional[str]
+
+
+@dataclass
 class Metadata:
     name: str
     owner: str
@@ -16,7 +22,7 @@ class Metadata:
     url: Optional[str]
     license: Optional[str]
     updated: Optional[date]
-    schema: Optional[List[str]]
+    schema: Optional[List[SchemaItem]] = field(default_factory=list)
 
 
 @dataclass
@@ -66,7 +72,7 @@ class DataProductManifest:
 
 @TrackingDecorator.track_time
 def load_data_product_manifest(config_path) -> DataProductManifest:
-    data_product_manifest_path = os.path.join(config_path, "data-product.yml")
+    data_product_manifest_path = os.path.join(config_path, "data-product-manifest.yml")
 
     if os.path.exists(data_product_manifest_path):
         with open(data_product_manifest_path, "r") as file:

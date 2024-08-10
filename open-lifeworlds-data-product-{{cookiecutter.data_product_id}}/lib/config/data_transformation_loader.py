@@ -5,9 +5,10 @@ from typing import List, Optional
 
 import yaml
 from dacite import from_dict
-from lib.tracking_decorator import TrackingDecorator
 from yaml import MappingNode
 from yaml.constructor import ConstructorError
+
+from lib.tracking_decorator import TrackingDecorator
 
 
 @dataclass
@@ -29,10 +30,18 @@ class Dataset:
 
 
 @dataclass
+class Property:
+    name: str
+    rename: Optional[str] = None
+    remove: Optional[bool] = None
+
+
+@dataclass
 class File:
     source_file_name: str
     target_file_name: str
     datasets: Optional[List[Dataset]] = field(default_factory=list)
+    properties: Optional[List[Property]] = field(default_factory=list)
 
 
 @dataclass

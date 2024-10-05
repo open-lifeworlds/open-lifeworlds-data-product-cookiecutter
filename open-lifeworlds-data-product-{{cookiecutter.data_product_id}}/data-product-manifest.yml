@@ -4,7 +4,7 @@ metadata:
   name: {{ cookiecutter.data_product_name }}
   owner: {{ cookiecutter.data_product_owner_name }}
   description:
-  url:
+  url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}
   license: CC-BY 4.0
   updated:
   schema:

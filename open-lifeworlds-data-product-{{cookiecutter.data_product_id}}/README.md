@@ -61,7 +61,8 @@ known issues).
 
 ## License
 
-Distributed under the GPLv3 License. See [LICENSE.md](./LICENSE.md) for more information.
+Code distributed under the GPLv3 license. See [LICENSE-GPLv3.md](./LICENSE-GPL) for more information.
+Data distributed under the CC-BY 4.0 license. See [LICENSE-CC-BY.md](./LICENSE-CC-BY.md) for more information.
 
 ## Contact
 

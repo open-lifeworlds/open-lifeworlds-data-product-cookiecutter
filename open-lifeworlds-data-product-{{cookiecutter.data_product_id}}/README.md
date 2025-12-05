@@ -6,16 +6,38 @@
     <img src="logo-with-text.png" alt="Logo" style="height: 80px; ">
   </a>
 
-  <h1 align="center">{{ cookiecutter.data_product_owner_name }} Data Product - {{ cookiecutter.data_product_name }}</h1>
+  <h1 align="center">{{ cookiecutter.data_product_name }}</h1>
 
   <p align="center">
     Data product providing TODO</a>
   </p>
 </p>
 
+[![Issues](https://img.shields.io/github/issues/open-data-product/open-data-product-{{ cookiecutter.data_product_id }})](https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{
+cookiecutter.data_product_id }}/issues)
+
+<br />
+<p align="center">
+  <a href="https://github.com/open-data-product/open-data-product-{{ cookiecutter.data_product_id }}">
+    <img src="logo-with-text.png" alt="Logo" style="height: 80px; ">
+  </a>
+
+  <h1 align="center">{{ cookiecutter.data_product_name }}</h1>
+
+  <p align="center">
+    Data product providing TODO
+  </p>
+</p>
+
 ## About The Project
 
-See [data product canvas](docs/data-product-canvas.md).
+See
+
+* [Data Product Canvas](docs/data-product-canvas.md)
+* [Open Data Product Specification canvas](./docs/odps-canvas.md) and
+* [Data Product Descriptor Specification canvas](./docs/dpds-canvas.md)
+
+See also [main.ipynb](./main.ipynb) for a sample notebook.
 
 ### Built With
 
@@ -38,31 +60,38 @@ Run this command to generate and activate a virtual environment.
 
 ```shell
 uv venv
+source .venv/bin/activate
+```
+
+Run this command to install dependencies defined in `pyproject.toml`.
+
+```shell
+uv sync
+```
+
+Run this command to re-install the Open Data Product Python library (if necessary).
+
+```shell
+uv pip install --no-cache-dir git+https://github.com/open-lifeworlds/open-lifeworlds-python-lib.git
 ```
 
 Run this command to start the main script.
 
 ```shell
-python3 main.py [OPTION]...
-
-  -h, --help                           show this help
-  -c, --clean                          clean intermediate results before start
-  -q, --quiet                          do not log outputs
-
-Examples:
-  python3 main.py -c
+uv run main.py
 ```
 
 ## Roadmap
 
-See the [open issues](https://github.com/open-lifeworlds/{{ cookiecutter.data_product_id }}/issues) for a list of
-proposed features (and
+See
+the [open issues](https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}/issues)
+for a list of proposed features (and
 known issues).
 
 ## License
 
-Code distributed under the GPLv3 license. See [LICENSE-GPLv3.md](./LICENSE-GPL) for more information.
-Data distributed under the CC-BY 4.0 license. See [LICENSE-CC-BY.md](./LICENSE-CC-BY.md) for more information.
+Data product distributed under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+See [LICENSE.md](./LICENSE.md) for more information.
 
 ## Contact
 

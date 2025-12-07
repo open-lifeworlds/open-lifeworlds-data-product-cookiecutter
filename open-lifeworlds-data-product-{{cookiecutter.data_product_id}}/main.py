@@ -1,4 +1,5 @@
 import os
+import sys
 
 import click
 from openlifeworlds.config.data_product_manifest_loader import (
@@ -127,3 +128,7 @@ def main(clean, quiet):
         dpds=dpds,
         docs_path=docs_path,
     )
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

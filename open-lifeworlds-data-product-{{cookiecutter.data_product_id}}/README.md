@@ -9,22 +9,6 @@
   <h1 align="center">{{ cookiecutter.data_product_name }}</h1>
 
   <p align="center">
-    Data product providing TODO</a>
-  </p>
-</p>
-
-[![Issues](https://img.shields.io/github/issues/open-data-product/open-data-product-{{ cookiecutter.data_product_id }})](https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{
-cookiecutter.data_product_id }}/issues)
-
-<br />
-<p align="center">
-  <a href="https://github.com/open-data-product/open-data-product-{{ cookiecutter.data_product_id }}">
-    <img src="logo-with-text.png" alt="Logo" style="height: 80px; ">
-  </a>
-
-  <h1 align="center">{{ cookiecutter.data_product_name }}</h1>
-
-  <p align="center">
     Data product providing TODO
   </p>
 </p>

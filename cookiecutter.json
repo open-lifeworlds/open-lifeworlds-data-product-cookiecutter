@@ -1,6 +1,6 @@
 {
   "data_product_name": "My Data Product",
-  "data_product_id": "{{ cookiecutter.data_product_name|lower|replace(' ', '-') }}",
+  "data_product_id": "{{ cookiecutter.data_product_name|lower|replace(' ', '-')|replace('(', '')|replace(')', '') }}",
   "data_product_url": "https://github.com/open-lifeworlds/open-lifeworlds-data-product-{{ cookiecutter.data_product_id }}",
   "data_product_classification": [
     "source-aligned",
